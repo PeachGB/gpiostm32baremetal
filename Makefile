@@ -129,6 +129,30 @@ firmware.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.elf.dir/build.make CMakeFiles/firmware.elf.dir/build
 .PHONY : firmware.elf/fast
 
+src/gpio.o: src/gpio.c.o
+.PHONY : src/gpio.o
+
+# target to build an object file
+src/gpio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.elf.dir/build.make CMakeFiles/firmware.elf.dir/src/gpio.c.o
+.PHONY : src/gpio.c.o
+
+src/gpio.i: src/gpio.c.i
+.PHONY : src/gpio.i
+
+# target to preprocess a source file
+src/gpio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.elf.dir/build.make CMakeFiles/firmware.elf.dir/src/gpio.c.i
+.PHONY : src/gpio.c.i
+
+src/gpio.s: src/gpio.c.s
+.PHONY : src/gpio.s
+
+# target to generate assembly for a file
+src/gpio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/firmware.elf.dir/build.make CMakeFiles/firmware.elf.dir/src/gpio.c.s
+.PHONY : src/gpio.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -170,6 +194,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... firmware.elf"
+	@echo "... src/gpio.o"
+	@echo "... src/gpio.i"
+	@echo "... src/gpio.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
